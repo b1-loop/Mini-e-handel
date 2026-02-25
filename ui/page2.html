@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kassan | TechPrylar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-content">
+            <h1>TechPrylar<span class="dot">.</span></h1>
+            <nav>
+                <a href="index.html">Produkter</a>
+                <a href="page2.html" class="cart-link active">
+                    🛒 <span id="cart-counter" class="badge">0</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="checkout-layout">
+            <article class="form-section">
+                <h2>Leveransuppgifter</h2>
+                <form id="checkout-form">
+                    <div class="form-group">
+                        <label for="email">E-postadress</label>
+                        <input type="email" id="email" required placeholder="namn@epost.se">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">För- och efternamn</label>
+                        <input type="text" id="name" required placeholder="Lars Larsson">
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Slutför köp</button>
+                </form>
+            </article>
+
+            <aside class="summary-section">
+                <h2>Din varukorg</h2>
+                <p>Du har <strong id="summary-count">0</strong> varor i kassan.</p>
+                <div class="empty-state">Redo att betalas.</div>
+            </aside>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

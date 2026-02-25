@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechPrylar | Produkter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-content">
+            <h1>TechPrylar<span class="dot">.</span></h1>
+            <nav>
+                <a href="index.html" class="active">Produkter</a>
+                <a href="components.html">UI Kit</a>
+                <a href="page2.html" class="cart-link">
+                    🛒 <span id="cart-counter" class="badge">0</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h2>Hitta din nästa gadget.</h2>
+            <p>Snabbt, enkelt och utan krångel.</p>
+        </section>
+
+        <section class="product-grid">
+            <article class="product-card">
+                <div class="product-img">💻</div>
+                <div class="product-info">
+                    <h3>DevBook Pro 15"</h3>
+                    <p class="price">14 999 kr</p>
+                    <button class="btn btn-primary js-add-to-cart" data-id="p1">Köp nu</button>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-img">📱</div>
+                <div class="product-info">
+                    <h3>Phone X Alpha</h3>
+                    <p class="price">8 490 kr</p>
+                    <button class="btn btn-primary js-add-to-cart" data-id="p2">Köp nu</button>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-img">🎧</div>
+                <div class="product-info">
+                    <h3>NoiseCancel 3000</h3>
+                    <p class="price">2 990 kr</p>
+                    <button class="btn btn-primary js-add-to-cart" data-id="p3">Köp nu</button>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 TechPrylar. Mini-leverans.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

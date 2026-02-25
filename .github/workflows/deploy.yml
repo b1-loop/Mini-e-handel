@@ -1,0 +1,42 @@
+﻿name: Deploy Mini E-handel to GitHub Pages
+
+on:
+  # Kör scriptet varje gång du pushar till main-branchen
+  push:
+    branches: ["master"]
+  # Tillåter dig att köra workflowet manuellt från Actions-fliken
+  workflow_dispatch:
+
+# Sätter rättigheter så att scriptet får ladda upp till Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Ser till att vi inte kör flera deploys samtidigt och krockar
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+        
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Superviktigt: Vi säger åt Actions att publicera filerna i ui-mappen!
+          path: './ui' 
+          
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
