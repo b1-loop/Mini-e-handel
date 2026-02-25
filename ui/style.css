@@ -161,6 +161,11 @@ nav a {
         background: var(--primary-hover);
     }
 
+.btn:disabled {
+    background: var(--text-muted);
+    cursor: not-allowed;
+}
+
 .w-100 {
     width: 100%;
 }
@@ -204,15 +209,59 @@ footer {
     margin-top: 2rem;
 }
 
-/* --- Cart Items List --- */
+/* --- Cart & Success Message --- */
 .cart-item {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 0.75rem;
+    align-items: center;
+    margin-bottom: 1rem;
     font-size: 0.95rem;
 }
+
+.cart-item-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-remove {
+    background: none;
+    border: none;
+    color: #EF4444; /* Röd färg */
+    cursor: pointer;
+    font-size: 0.8rem;
+    text-align: left;
+    padding: 0;
+    margin-top: 2px;
+}
+
+    .btn-remove:hover {
+        color: #B91C1C;
+        text-decoration: underline;
+    }
 
 .empty-state {
     color: var(--text-muted);
     font-style: italic;
 }
+
+.success-message {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: var(--white);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    margin-top: 3rem;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+}
+
+    .success-message h2 {
+        color: #10B981;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .success-message p {
+        font-size: 1.1rem;
+        color: var(--text-muted);
+        margin-bottom: 2rem;
+    }

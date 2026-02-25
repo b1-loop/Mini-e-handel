@@ -19,7 +19,7 @@
         </div>
     </header>
 
-    <main class="container">
+    <main class="container" id="checkout-main">
         <section class="checkout-layout">
             <article class="form-section">
                 <h2>Leveransuppgifter</h2>
@@ -32,7 +32,29 @@
                         <label for="name">För- och efternamn</label>
                         <input type="text" id="name" required placeholder="Lars Larsson">
                     </div>
-                    <button type="submit" class="btn btn-primary w-100">Slutför köp</button>
+
+                    <div class="form-group">
+                        <label for="address">Gatuadress</label>
+                        <input type="text" id="address" required placeholder="Storgatan 1">
+                    </div>
+
+                    <div style="display: flex; gap: 1rem;">
+                        <div class="form-group" style="flex: 1;">
+                            <label for="zip">Postnummer</label>
+                            <input type="text" id="zip" required placeholder="123 45">
+                        </div>
+                        <div class="form-group" style="flex: 2;">
+                            <label for="city">Ort</label>
+                            <input type="text" id="city" required placeholder="Stockholm">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Telefonnummer (frivilligt)</label>
+                        <input type="tel" id="phone" placeholder="070-123 45 67">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100" id="submit-btn">Slutför köp</button>
                 </form>
             </article>
 
