@@ -39,7 +39,15 @@
             <aside class="summary-section">
                 <h2>Din varukorg</h2>
                 <p>Du har <strong id="summary-count">0</strong> varor i kassan.</p>
-                <div class="empty-state">Redo att betalas.</div>
+                <hr style="margin: 1rem 0; border: 0; border-top: 1px solid var(--border);">
+
+                <div id="cart-items-list"></div>
+
+                <hr style="margin: 1rem 0; border: 0; border-top: 1px solid var(--border);">
+                <div style="display: flex; justify-content: space-between; font-weight: bold; font-size: 1.2rem;">
+                    <span>Totalt:</span>
+                    <span id="cart-total-sum" class="dot">0 kr</span>
+                </div>
             </aside>
         </section>
     </main>

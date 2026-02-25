@@ -203,3 +203,16 @@ footer {
     border-top: 1px solid var(--border);
     margin-top: 2rem;
 }
+
+/* --- Cart Items List --- */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+}
+
+.empty-state {
+    color: var(--text-muted);
+    font-style: italic;
+}
