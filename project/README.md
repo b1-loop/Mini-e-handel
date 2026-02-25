@@ -16,6 +16,8 @@
 3.  **[Must]** Systemet ska visa antalet varor i varukorgen i headern.
 4.  **[Must]** Användaren ska kunna gå till en utcheckningssida (Checkout).
 5.  **[Should]** Användaren ska kunna fylla i sina leveransuppgifter.
+Uppgraderade varukorgen från en enkel siffer-räknare till en dynamisk lista där användaren kan se specifika varor, totalsumma och ta bort produkter.
+Varför: För att öka realismen och användarvänligheten (Usability). Det krävde lite mer JS än maxgränsen för ett "G", men var ett medvetet val för att visa en komplett köpresa.
 
 **Icke-funktionella krav:**
 6.  **[Must - Usability]** Gränssnittet ska vara responsivt (Mobile-first).
@@ -43,3 +45,6 @@
 * **Designval (UML):** Jag valde ett sekvensdiagram utöver klassdiagrammet för att det tydligast visar asynkroniteten och interaktionen mellan Användare, UI och Data (LocalStorage) just för varukorgsflödet. Det är där den kritiska logiken ligger.
 * **Designval (UI):** UI-strukturen är byggd på CSS Grid för produktlistan för att säkerställa att korten alltid linjerar upp snyggt, vilket ger en professionell "produktkänsla". 
 * **Risker & Begränsningar:** Den nuvarande arkitekturen använder LocalStorage. En stor säkerhetsrisk i en riktig applikation är att pris och kundvagn hanteras på klientsidan (client-side manipulation). I en framtida version (förbättring) måste prisvalidering och lagersaldo verifieras mot en säker backend (Server) innan betalning går igenom.
+* CI/CD & Deployment: För att demonstrera ett verklighetsförankrat arbetsflöde har jag satt upp en CI/CD-pipeline via GitHub Actions. Vid varje push till main/master publiceras sidan automatiskt till GitHub Pages.
+
+Tillgänglighet (Accessibility): Jag har sett till att använda semantisk HTML (header, main, section, article) och kopplat alla form-labels till sina inputs med for- och id-attribut för att skärmläsare ska förstå utcheckningen.
